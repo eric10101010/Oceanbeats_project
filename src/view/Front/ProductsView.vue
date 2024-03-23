@@ -33,7 +33,7 @@
                                     <img :src="product.imageUrl" alt="productsPhoto" class="rounded-top">
                                 </router-link>
                                 <!-- 2.分類tag -->
-                                <span class="px-2 py-2 badge bg-primary text-white position-absolute top-0 start-0">
+                                <span class="px-2 py-2 badge bg-secondary text-white position-absolute top-0 start-0">
                                     {{ product.category }}
                                 </span>
                                 <!-- <div style="height: 100px; background-size: cover; background-position: center;" 
@@ -59,8 +59,8 @@
                                     </ul>
                                     <hr>
                                     <div class="d-flex justify-content-around pb-3">
-                                        <button type="button" class="btn btn-primary">
-                                            <routerLink :to="`/product/${product.id}`" class="text-decoration-none text-white">
+                                        <button type="button" class="productsSeeMore btn btn-outline-primary ">
+                                            <routerLink :to="`/product/${product.id}`" class="text-decoration-none">
                                                 查看更多
                                             </routerLink>
                                         </button>
@@ -198,6 +198,18 @@ export default {
     }
 }
 .products {
+    &SeeMore {
+        &:hover {
+                a {
+                    color: #FFF;
+                }
+            }
+
+        &:hover {
+            opacity: .8;
+            transition: .3s;
+        }
+    }
     &List {
         box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
         @media (max-width: 992px) {

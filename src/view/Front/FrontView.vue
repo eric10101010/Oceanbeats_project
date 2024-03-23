@@ -6,9 +6,6 @@
             </div>
             <nav class="headerList">
                 <ul class="headerMenu list-unstyled">
-                    <li class="headerItem mx-3">
-                        <routerLink to="/" class="text-white text-decoration-none">首頁</routerLink>
-                    </li>
                     <li class="headerItem me-3">
                         <routerLink to="/about" class="text-white text-decoration-none">關於我們</routerLink> 
                     </li>
@@ -45,10 +42,6 @@
                     </div>
                 </label>
                 <ul class="hamburger-menu bg-primary text-white d-flex list-unstyled">
-                    <li class="headerItem mb-2 mb-3 mt-4">
-                        <a class="nav-link" href="/">首頁</a>
-                        <!-- <routerLink to="/" class="pageScroll text-decoration-none">首頁</routerLink> -->
-                    </li>
                     <li class="headerItem pb-lg-0 pb-md-0 mb-3">
                         <a class="nav-link" href="/#/about">關於我們</a>
                         <!-- <routerLink to="/about" class="pageScroll text-decoration-none">關於我們</routerLink>  -->

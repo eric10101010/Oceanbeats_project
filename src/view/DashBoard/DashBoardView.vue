@@ -27,7 +27,6 @@
     <RouterView></RouterView>
 </template>
 
-
 <script>
 import axios from 'axios';
 import { mapActions } from 'pinia';
