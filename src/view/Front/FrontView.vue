@@ -72,7 +72,7 @@
     <RouterView></RouterView>
     <div class="footer bg-primary">
         <div class="container">
-            <ul class="footer footer-expend-lg d-flex justify-content-evenly pb-7 mb-lg-4 mb-md-4 mb-4 list-unstyled">
+            <ul class="footer footer-expend-lg d-flex justify-content-evenly  mb-4 list-unstyled">
                 <li>
                     <h4 class="text-light mb-5 ps-3 h5">公司資訊</h4>
                     <ul class="ps-3 list-unstyled text-center">
@@ -124,9 +124,10 @@
                 </li>
             </ul>
         </div>
-        <div class="d-flex flex-column align-items-center justify-content-center border-top border-white m-lg-6 pt-md-6">
-                <p class="text-light">© 2024 Oceanbeat</p>
-                <p class="text-light">僅供個人學習使用 無商業用途</p>
+        <hr class="border border-white">
+        <div class="container d-flex flex-column align-items-center justify-content-center mt-lg-8 mt-md-6 mt-6">
+            <p class="text-light">© 2024 Oceanbeat</p>
+            <p class="text-light">僅供個人學習使用 無商業用途</p>
         </div>
     </div>
 </template>
@@ -194,7 +195,7 @@
 }
 .footer {
     font-family: 'GenSenRounded';
-    padding: 50px 0;
+    padding: 36px 0;
 }
 .hamburger-menu {
     opacity: 0.97;

@@ -75,7 +75,7 @@
                 <div class="cartEmpty d-flex flex-column justify-content-center align-items-center">
                     <div class="cartEmptyBox text-center p-4">
                         <h3 class="text-white">目前購物車是空的</h3>
-                        <router-link to="/products" class="text-decoration-none text-secondary">返回選購商品</router-link>
+                        <router-link to="/products" class="text-decoration-none text-info">返回選購商品</router-link>
                     </div>
                 </div>
             </li>
