@@ -95,7 +95,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="d-flex justify-content-between justify-content-md-around justify-content-lg-around pb-4 px-lg-0 px-md-4 px-2" v-if="carts.final_total == carts.total" >
+                    <li class="d-flex justify-content-between justify-content-md-around justify-content-lg-between pb-4 px-lg-4 px-md-4 px-2" v-if="carts.final_total == carts.total" >
                         <span class="ms-2">總金額:</span>
                         <span class="fw-bolder text-danger me-2">NT${{ this.carts.total }}</span>
                     </li>

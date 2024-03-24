@@ -29,39 +29,44 @@
                 </ul>
             </div>
             <div class="row d-flex my-lg-8 my-md-8 my-6">
-                <!--訂單明細-->
                 <div class="col-lg-6 col-md-6 col-12">
-                    <div class="d-flex flex-column border pb-lg-8 pb-md-6 pb-6">
+                    <div class="d-flex flex-column  pb-lg-0 pb-md-0 pb-4">
                         <h3 class="text-center py-lg-3 py-md-2 py-2 mb-0 bg-secondary text-white h5">
                             訂單明細
                         </h3>
-                        <table class="mb-0">
-                            <thead class="border borer-bottom">
+                        <table class="table border mb-0">
+                            <thead>
                                 <tr class="text-center">
-                                    <th class="col-lg-6 col-md-4 col-4 py-lg-4 py-md-2 py-2">
-                                        商品資訊
-                                    </th>
-                                    <th class="col-lg-3 col-md-4 col-4 py-lg-4 py-md-2 py-2">
-                                        數量
-                                    </th>
-                                    <th class="col-lg-3 col-md-4 col-4 py-lg-34 py-md-2 py-2">
-                                        小記
-                                    </th>
+                                    <th scope="col" width="22%">商品圖片</th>
+                                    <th scope="col" width="22%">商品名稱</th>
+                                    <th scope="col" width="17%">數量</th>
+                                    <th scope="col" width="17%">小計</th>
+                                    
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody class="text-center">
                                 <tr v-for="product of products" :key="product.id" >
-                                    <th scope="row" class="col-lg-3 col-md-4 col-4 pt-4">
-                                        <div class="d-flex justify-content-center align-items-center">
-                                            <img :src="product[1].product.imageUrl" alt="cartPhoto" style="max-height:80px" class=" object-fit-cover">
-                                            <span>{{ product[1].product.title }}</span>
+                                    <td>
+                                        <div class="d-flex justify-content-center align-items-center ms-lg-3 ms-md-0 ms-0">
+                                            <img :src="product[1].product.imageUrl" alt="cartPhoto" style="max-height:60px" class=" object-fit-cover">
                                         </div>
-                                    </th>
-                                    <td class="col-lg-3 col-md-4 col-4 text-center">{{ product[1].qty }}</td>
-                                    <td class="col-lg-3 col-md-4 col-4 text-center">NT${{ product[1].total }}</td>
+                                    </td>
+                                    <td>
+                                        <p class="pt-3">{{ product[1].product.title }}</p>
+                                    </td>
+                                    <td>
+                                        <p class="pt-3">{{ product[1].qty }}</p>
+                                    </td>
+                                    <td>
+                                        <p class="pt-3">NT${{ product[1].total }}</p>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
+                        <div class="d-flex justify-content-between align-items-center border border-top-0 p-3 px-lg-3 px-md-3 px-3">
+                            <span class="fw-bold text-lg ps-lg-4 ps-md-0 ps-0">總金額:</span>
+                            <span class="text-danger fw-bolder me-lg-3 me-md-0 me-0">NT${{order.total}}</span>
+                        </div>
                     </div>
                 </div>
                 <!--訂單資訊-->
@@ -114,7 +119,7 @@
                                             <tr>
                                                 <th scope="col" width="110" class="text-left ps-3">訂單金額:</th>
                                                 <td class="fw-bolder"
-                                                    :class="{ 'text-success' : order.is_paid,
+                                                    :class="{ 'text-primary' : order.is_paid,
                                                             'text-danger' : !order.is_paid}"
                                                 >
                                                 NT${{order.total}}
