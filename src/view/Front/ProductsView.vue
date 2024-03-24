@@ -6,7 +6,7 @@
     </loading>
     <BannerTop :subject-tilte="subjectTilte" :back-list="backList"></BannerTop>
     <div class="container">
-        <div class="row mt-lg-6 mt-md-4 mt-5 d-flex justify-content-center">
+        <div class="row products mt-lg-6 mt-md-4 mt-5 d-flex justify-content-center">
             <!-- 種類側欄 -->
             <div class="col-lg-3 col-md-3 col-10 mb-lg-0 mb-md-0 mb-5">
                 <ul class="productsSide list-group list-unstyle">
@@ -111,7 +111,7 @@ export default {
             },
             subjectTilte: '商品列表',
             breadcrumbName:'商品列表',
-            backList:  'https://plus.unsplash.com/premium_photo-1709311438052-9c3f5f867b9a?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4NHx8fGVufDB8fHx8fA%3D%3D',
+            backList:  'https://i.imgur.com/fyyWfNw.jpeg',
         }
     },
     computed:{
@@ -198,6 +198,7 @@ export default {
     }
 }
 .products {
+    font-family: 'GenSenRounded';
     &SeeMore {
         &:hover {
                 a {

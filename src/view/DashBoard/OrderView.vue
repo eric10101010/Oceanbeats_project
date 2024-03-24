@@ -1,5 +1,12 @@
 <template>
-    <VueLoading :active="isLoading" :z-index="1060" />
+    <loading v-model:active="isLoading">
+        <div class="loadingio-spinner-spin-pqarappzpn">
+            <div class="ldio-eviqoo58lam">
+            <div><div></div></div><div><div></div>
+            </div><div><div></div></div><div><div></div></div>
+            <div><div></div></div><div><div></div></div><div><div>
+            </div></div><div><div></div></div></div></div>
+    </loading>
     <div class="container">
         <div class="row d-flex justify-content-center">
             <div class="col-md-10 gx-0">
@@ -62,7 +69,8 @@
 
 import { mapActions } from 'pinia';
 import { useToastMessageStore } from "../../stores/toastMessage";
-import axios from 'axios'
+import axios from 'axios';
+import Loading from 'vue-loading-overlay';
 import OrderModal from '../../components/OrderModal.vue';
 import DelOrderModal from '../../components/DelOrderModal.vue';
 import Pagination from '../../components/Pagination.vue';
@@ -100,10 +108,13 @@ export default {
         //取得訂單列表
         getOrders(page = 1) {
             const api =`${VITE_API}/api/${VITE_PATH}/admin/orders?page=${page}`;
+            let vm = this;
+            vm.isLoading = true;
             axios.get(api)
             .then(res => {
-                this.ordersList = res.data.orders;
-                this.pages = res.data.pagination;
+                vm.ordersList = res.data.orders;
+                vm.pages = res.data.pagination;
+                vm.isLoading = false;
                 // console.dir(res.data.orders[0]);
             })
             .catch(err => {
@@ -126,7 +137,8 @@ export default {
         //編輯訂單
         updateOrder() {
             let api =  `${VITE_API}/api/${VITE_PATH}/admin/order/${this.tempOrder.id}`;
-            let name = this.tempOrder.title;
+            let vm = this;
+            vm.isLoading = true;
             let method = 'put';
             this.isLoading = false;
             axios[method](api, { data:this.tempOrder })
@@ -193,7 +205,8 @@ export default {
     components: {
         OrderModal,
         DelOrderModal,
-        Pagination
+        Pagination,
+        Loading
     }
 }
 </script>
@@ -205,4 +218,104 @@ export default {
     background-color: #198754 !important;
     border-color: #198754 !important; 
 }
+@keyframes ldio-eviqoo58lam {
+        0% {
+            opacity: 1;
+            backface-visibility: hidden;
+            transform: translateZ(0) scale(1.5,1.5);
+        } 100% {
+            opacity: 0;
+            backface-visibility: hidden;
+            transform: translateZ(0) scale(1,1);
+        }
+    }
+    .ldio-eviqoo58lam div > div {
+        position: absolute;
+
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: #3e6d8d;
+        animation: ldio-eviqoo58lam 1s linear infinite;
+    }.ldio-eviqoo58lam div:nth-child(1) > div {
+        left: 148px;
+        top: 88px;
+        animation-delay: -0.875s;
+    }
+    .ldio-eviqoo58lam > div:nth-child(1) {
+        transform: rotate(0deg);
+        transform-origin: 160px 100px;
+    }.ldio-eviqoo58lam div:nth-child(2) > div {
+        left: 130px;
+        top: 130px;
+        animation-delay: -0.75s;
+    }
+    .ldio-eviqoo58lam > div:nth-child(2) {
+        transform: rotate(45deg);
+        transform-origin: 142px 142px;
+    }.ldio-eviqoo58lam div:nth-child(3) > div {
+        left: 88px;
+        top: 148px;
+        animation-delay: -0.625s;
+    }
+    .ldio-eviqoo58lam > div:nth-child(3) {
+        transform: rotate(90deg);
+        transform-origin: 100px 160px;
+    }.ldio-eviqoo58lam div:nth-child(4) > div {
+        left: 46px;
+        top: 130px;
+        animation-delay: -0.5s;
+    }
+    .ldio-eviqoo58lam > div:nth-child(4) {
+        transform: rotate(135deg);
+        transform-origin: 58px 142px;
+    }.ldio-eviqoo58lam div:nth-child(5) > div {
+        left: 28px;
+        top: 88px;
+        animation-delay: -0.375s;
+    }
+    .ldio-eviqoo58lam > div:nth-child(5) {
+        transform: rotate(180deg);
+        transform-origin: 40px 100px;
+    }.ldio-eviqoo58lam div:nth-child(6) > div {
+        left: 46px;
+        top: 46px;
+        animation-delay: -0.25s;
+    }
+    .ldio-eviqoo58lam > div:nth-child(6) {
+        transform: rotate(225deg);
+        transform-origin: 58px 58px;
+    }.ldio-eviqoo58lam div:nth-child(7) > div {
+        left: 88px;
+        top: 28px;
+        animation-delay: -0.125s;
+    }
+    .ldio-eviqoo58lam > div:nth-child(7) {
+        transform: rotate(270deg);
+        transform-origin: 100px 40px;
+    }.ldio-eviqoo58lam div:nth-child(8) > div {
+        left: 130px;
+        top: 46px;
+        animation-delay: 0s;
+    }
+    .ldio-eviqoo58lam > div:nth-child(8) {
+        transform: rotate(315deg);
+        transform-origin: 142px 58px;
+    }
+    .loadingio-spinner-spin-pqarappzpn {
+        width: 200px;
+        height: 200px;
+        display: inline-block;
+        overflow: hidden;
+        background: transparent;
+    }
+    .ldio-eviqoo58lam {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform: translateZ(0) scale(1);
+        backface-visibility: hidden;
+      transform-origin: 0 0; /* see note above */
+    }
+    .ldio-eviqoo58lam div { box-sizing: content-box; }
 </style>

@@ -8,7 +8,7 @@
     <!-- 產品細節資訊 -->
     <section class="productInfor">
         <div class="container">
-            <ul class="row list-unstyled mt-lg-6 mt-md-6 mt-5">
+            <ul class="row product list-unstyled mt-lg-6 mt-md-6 mt-5">
                 <!--商品左側圖片-->
                 <li class="col-lg-7 col-md-7 col-12">
                     <div class="px-lg-5 px-md-3 px-0">
@@ -181,7 +181,7 @@ export default {
             products: [],
             isLoading: false,
             subjectTilte: '商品細節',
-            backList:  'https://plus.unsplash.com/premium_photo-1709311438052-9c3f5f867b9a?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4NHx8fGVufDB8fHx8fA%3D%3D',
+            backList:  'https://i.imgur.com/fyyWfNw.jpeg',
             breadcrumbName:'商品細節'
         }
     },
@@ -266,6 +266,7 @@ export default {
 
 <style lang="scss" scoped>
 .product{
+    font-family: 'GenSenRounded';
     &Infor {
         @media (max-width:992px) {
             h2 {
@@ -282,6 +283,7 @@ export default {
         }
     }
     &Tab {
+        font-family: 'GenSenRounded';
         &Title {
             width: 50%;
             @media (max-width:767px) {
