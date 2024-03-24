@@ -10,7 +10,7 @@
             <!-- 購物車列表 -->
             <li class="col-lg-7 col-md-10 col-12" v-if="carts.carts?.length !== 0">
                 <table class="table align-middle" >
-                    <thead class="border border-bottom-0">
+                    <thead>
                         <tr class="border text-center">
                             <th class="col-lg-4 col-md-3 col-2 bg-secondary text-white py-lg-3 py-md-2 py-2">商品資訊</th>
                             <th class="col-lg-3 col-md-2 col-2 bg-secondary text-white py-lg-3 py-md-2 py-2">單價</th>
@@ -18,11 +18,13 @@
                             <th class="col-lg-2 col-md-2 col-2 bg-secondary text-white py-lg-3 py-md-2 py-2">小計</th>
                         </tr>
                     </thead>
-                    <tbody class="border border-top-0 text-center">
+                    <tbody class="border-left border-right text-center">
                         <tr v-for="cart in carts.carts" :key="cart.id">
-                            <td class="d-flex align-items-center justify-content-center">
-                                <img :src="cart.product.imageUrl" alt="cartPhoto" style="max-width:80px;min-height:60px;"/>
-                                <span class="fw-bold ms-2 d-lg-block d-md-block d-none">{{ cart.product.title}}</span>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <img :src="cart.product.imageUrl" alt="cartPhoto" style="max-width:80px;min-height:60px;"/>
+                                    <span class="fw-bold ms-2 d-lg-block d-md-block d-none">{{ cart.product.title}}</span>
+                                </div>  
                             </td>
                             <td class="pt-4">
                                 {{ cart.product.price }}
@@ -52,7 +54,6 @@
                                         <button type="button" class="border"  @click="cart.qty++; editCart(cart, cart.qty)">
                                             +
                                         </button>
-
                                     </div>
                                 </div>
                             </td>
@@ -94,7 +95,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="d-flex justify-content-around pb-4 px-0" v-if="carts.final_total == carts.total" >
+                    <li class="d-flex justify-content-between justify-content-md-around justify-content-lg-around pb-4 px-lg-0 px-md-4 px-2" v-if="carts.final_total == carts.total" >
                         <span class="ms-2">總金額:</span>
                         <span class="fw-bolder text-danger me-2">NT${{ this.carts.total }}</span>
                     </li>

@@ -4,15 +4,15 @@
         <div class="container">
             <!-- 進度條 -->
             <div class="row d-flex flex-column align-items-center position-relative my-8">
-                <div class="progressList col-lg-7 col-md-9 col-10">
-                    <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress col-lg-7 col-md-9 col-10">
+                    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
                     </div>
                 </div>
                 <ul class="col-lg-8 col-md-10 col-12 list-unstyled d-flex justify-content-between position-absolute top-50 start-50 translate-middle">
-                    <li class="progressStep bg-secondary rounded-circle d-flex justify-content-center align-items-center">
+                    <li class="progressStep bg-primary rounded-circle d-flex justify-content-center align-items-center ms-2">
                         <span class="h3 text-white pt-2 ">1</span>
                     </li>
-                    <li class="progressStep bg-info rounded-circle d-flex justify-content-center align-items-center">
+                    <li class="progressStep bg-secondary rounded-circle d-flex justify-content-center align-items-center">
                         <span class="h3 text-white pt-2">2</span>
                     </li>
                     <li class="progressStep bg-info rounded-circle d-flex justify-content-center align-items-center">
@@ -24,41 +24,39 @@
             <div class="checkOrderInfor row mt-6 d-flex justify-content-center mb-lg-8 mb-md-8 mb-6">
                 <div class="col-lg-6 col-md-10 col-12 mb-lg-0 mb-md-4 mb-4">
                     <h3 class="bg-secondary text-white text-center mb-0 py-lg-3 py-md-2 py-2">訂單資訊</h3>
-                    <div class="bg-table border py-lg-3 py-md-2 py-2">
-                        <ul class="row d-flex align-items-center text-center list-unstyled fw-bold mx-0 border-bottom">
-                            <li class="col-3">
-                                <p>商品圖片</p>
-                            </li>
-                            <li class="col-3">
-                                <p>商品名稱</p>
-                            </li>
-                            <li class="col-3">
-                                <p>數量</p>
-                            </li>
-                            <li class="col-3 text-center">
-                                <p>小計</p>
-                            </li>
-                        </ul>
-                        <ul class="row list-unstyled d-flex align-items-end h6 mx-0" v-for="item in carts" :key="item.id">
-                            <li class="col-3 d-flex justify-content-center align-items-center">
-                                <img :src="item.product.imageUrl" alt="cartPhoto" style="max-width:70px" class="object-fit-cover">
-                            </li>
-                            <li class="col-3 text-center">
-                                <p>{{ item.product.title }}</p>
-                            </li>
-                            <li class="col-3 text-center">
-                                <p>{{ item.qty }} {{ item.product.unit }}</p>
-                            </li>
-                            <li class="col-3 text-center">
-                                <p>{{ item.final_total }}</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="bg-table border border-top-0">
-                        <div class="d-flex justify-content-between align-items-center py-3 mx-6">
+                    <table class="table border mb-0">
+                        <thead>
+                            <tr class="text-center">
+                                <th scope="col" width="22%">商品圖片</th>
+                                <th scope="col" width="22%">商品名稱</th>
+                                <th scope="col" width="17%">數量</th>
+                                <th scope="col" width="17%">小計</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody class="text-center">
+                            <tr v-for="item in carts" :key="item.id">
+                                <td>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <img :src="item.product.imageUrl" alt="cartPhoto" style="max-width:70px" class="object-fit-cover">
+                                    </div>
+                                </td>
+                                <td>
+                                    <p class="pt-2">{{ item.product.title }}</p>
+                                </td>
+                                <td>
+                                    <p class="pt-2">{{ item.qty }} {{ item.product.unit }}</p>
+                                </td>
+                                <td>
+                                    <p class="pt-2">{{ item.final_total }}</p>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                    <div class="d-flex justify-content-between align-items-center border border-top-0 p-3 px-lg-3 px-md-3 px-4">
                             <span class="fw-bold text-lg">總金額:</span>
                             <span class="text-danger fw-bolder me-lg-3 me-md-4 me-0">NT${{ Final_total }}</span>
-                        </div>
                     </div>
                 </div>
                 <!--顧客資訊-->
