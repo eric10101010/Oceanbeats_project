@@ -15,16 +15,14 @@
                     <li class="headerItem me-3">
                         <routerLink to="/contact" class="text-white text-decoration-none">聯絡資訊</routerLink>
                     </li>
-                    <li class="headerItem position-relative"> 
-                        <!-- 購物車 -->
-                        <router-link to="/cart" class="nav-link">
+                    <li class="headerItem me-3 position-relative">
+                        <routerLink to="/cart" class="text-white text-decoration-none">
                             購物車
-                            <i class="bi bi-cart-fill"></i>
                             <span class="rounded-pill bg-danger text-white position-absolute px-2"
-                                style="right: -16px; top: -12px;">
+                                style="right: -20px; top: -20px;">
                                 {{ this.carts?.length }}
                             </span>
-                        </router-link>
+                        </routerLink>
                     </li>
                 </ul>
             </nav>
@@ -60,7 +58,7 @@
                             購物車
                             <i class="bi bi-cart-fill" style="font-size: 1.5rem;"></i>
                             <span class="rounded-pill bg-danger text-white position-absolute px-2 ms-1"
-                                style="right: -12px; top: -6px;">
+                                style="right: -18px; top: -6px;">
                                 {{ this.carts?.length }}
                             </span>
                         </a>
