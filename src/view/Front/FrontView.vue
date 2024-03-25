@@ -43,7 +43,7 @@
                 </label>
                 <ul class="hamburger-menu bg-primary text-white d-flex list-unstyled">
                     <li class="headerItem pb-lg-0 pb-md-0 mb-3">
-                        <a class="nav-link pt-4" href="/#/about">關於我們</a>
+                        <a class="nav-link pt-4" href="/Oceanbeats_project/#/about">關於我們</a>
                         <!-- <routerLink to="/about" class="pageScroll text-decoration-none">關於我們2</routerLink>  -->
                     </li>
                     <li class="headerItem pb-lg-0 pb-md-0 mb-3">
