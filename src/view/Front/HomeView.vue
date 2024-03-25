@@ -28,7 +28,7 @@
                 </p>
             </li>
         </ul>
-        <ul class="row list-unstyled mb-0 d-flex flex-lg-row-reverse flex-md-row flex-column align-items-center mb-lg-0 mb-md-0 mb-4">
+        <ul class="row list-unstyled mb-0 d-flex flex-lg-row-reverse flex-md-row flex-column align-items-center mb-lg-0 mb-md-0 mb-4 mt-lg-0 mt-md-4 mt-0">
             <li class="col-lg-6 col-md-6 col-10 gx-0" data-aos="fade-up" data-aos-duration="2000">
                 <img class="object-fit-cover w-100" src="https://i.imgur.com/4RCfmNd.jpg" alt="aboout-1">
             </li>
