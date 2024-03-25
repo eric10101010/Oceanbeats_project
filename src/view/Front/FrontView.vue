@@ -5,7 +5,7 @@
                 <routerLink to="/"><h1>Oceanbeats</h1></routerLink>
             </div>
             <nav class="headerList">
-                <ul class="headerMenu list-unstyled">
+                <ul class="headerMenu list-unstyled mb-0">
                     <li class="headerItem me-3">
                         <routerLink to="/about" class="text-white text-decoration-none">關於我們</routerLink> 
                     </li>
@@ -173,13 +173,16 @@
     &Item {
         a {
             color: #FFF;
-            font-size: 16px;
+            font-size: 24px;
             cursor: pointer;
             &:hover{
                 opacity: 0.5;
                 transition: all .3s;
             }
             @media (max-width:992px) {
+                font-size: 20px;
+            }
+            @media (max-width:767px) {
                 font-size: 16px;
             }
         }
