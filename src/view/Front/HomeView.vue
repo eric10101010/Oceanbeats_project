@@ -76,7 +76,7 @@
                     </div>
                 </div>
             </li>
-            <li class="indexCatelogItem col-lg-3 col-md-3 col-3 change mx-lg-2 mx-md-2 mx-3 mt-lg-0 mt-md-0 mt-3">
+            <li class="indexCatelogItem col-lg-3 col-md-3 col-3 change mx-lg-2 mx-md-2 mx-3 mt-0">
                 <div class="rotate-one" style="background-image: url('https://i.imgur.com/MyRVJ7R.jpg'); background-position: 50% 50%">
                     <div class="contents">
                         <router-link to="/products?category=有線耳罩" class="text-decoration-none text-light text-center px-3 border border-light">
@@ -92,7 +92,7 @@
                     </div>
                 </div>
             </li>        
-            <li class="indexCatelogItem col-lg-3 col-md-3 col-3 change mx-lg-2 mx-md-2 mx-3 mt-lg-0 mt-md-0 mt-3">
+            <li class="indexCatelogItem col-lg-3 col-md-3 col-3 change mx-lg-2 mx-md-2 mx-3 mt-0">
                 <div class="rotate-one" style="background-image: url('https://images.unsplash.com/photo-1594434533760-02e0f3faaa68?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1136&q=60');  background-position: 35% 50%">
                     <div class="contents"          >
                         <router-link to="/products?category=藍芽耳罩" class="text-decoration-none text-light text-center px-3 border border-light">
@@ -383,7 +383,13 @@ export default {
                 height: 25vh;
             }
             @media (max-width: 767px) {
-                height: 30vh;
+                height: 15vh;
+            }
+            @media (max-width: 631px) {
+                height: 20vh;
+            }
+            @media (max-width: 411px) {
+                height: 40vh;
             }
         }
     }
@@ -459,7 +465,19 @@ export default {
     }
     @media (max-width: 767px) {
         width: 120px;
-        height: 70px;
+        height: 120px;
+    }
+    @media (max-width: 631px) {
+        width: 100px;
+        height: 100px;
+    }
+    @media (max-width: 551px) {
+        width: 80px;
+        height: 80px;
+    }
+    @media (max-width: 471px) {
+        width: 120px;
+        height: 80px;
     }
 }
 .rotate-one, .rotate-two{
