@@ -77,9 +77,12 @@
                     <h4 class="text-light mb-5 ps-3 h5">公司資訊</h4>
                     <ul class="ps-3 list-unstyled text-center">
                         <li class="mb-4">
-                            <a class="text-light text-decoration-none" href="/about">關於我們</a></li>
-                        <li class="mb-4">
                             <router-link to="/about" class="text-light text-decoration-none">
+                            關於我們
+                            </router-link>
+                        </li>
+                        <li class="mb-4">
+                            <router-link to="/products" class="text-light text-decoration-none">
                             商品選購
                             </router-link>
                         </li>
@@ -94,17 +97,17 @@
                     <h4 class="text-light mb-5 ps-3 h5">服務範圍</h4>
                     <ul class="ps-3 list-unstyled text-center">
                         <li class="mb-4">
-                            <router-link to="/contact" class="text-light text-decoration-none">
+                            <router-link to="/" class="text-light text-decoration-none">
                             維修保固
                             </router-link>
                         </li>
                         <li class="mb-4">
-                            <router-link to="/contact" class="text-light text-decoration-none">
+                            <router-link to="/" class="text-light text-decoration-none">
                             客服諮詢
                             </router-link>
                         </li>
                             <li class="mb-4">
-                            <router-link to="/contact" class="text-light text-decoration-none">
+                            <router-link to="/" class="text-light text-decoration-none">
                             軟體支援
                             </router-link>
                         </li>

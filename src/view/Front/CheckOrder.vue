@@ -52,11 +52,10 @@
                                 </td>
                             </tr>
                         </tbody>
-
                     </table>
                     <div class="d-flex justify-content-between align-items-center border border-top-0 p-3 px-lg-3 px-md-3 px-4">
-                            <span class="fw-bold text-lg">總金額:</span>
-                            <span class="text-danger fw-bolder me-lg-3 me-md-4 me-0">NT${{ Final_total }}</span>
+                        <span class="fw-bold text-lg">總金額:</span>
+                        <span class="text-danger fw-bolder me-lg-3 me-md-4 me-0">NT${{ Final_total }}</span>
                     </div>
                 </div>
                 <!--顧客資訊-->
