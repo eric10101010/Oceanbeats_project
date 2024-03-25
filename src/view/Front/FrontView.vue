@@ -56,7 +56,7 @@
                     </li>
                     <li class="headerItem position-relative"> 
                         <!-- 購物車 -->
-                        <a href="/#/cart" class="nav-link text-decoration-none">
+                        <a href="/Oceanbeats_project/#/carts" class="nav-link text-decoration-none">
                             購物車
                             <i class="bi bi-cart-fill" style="font-size: 1.5rem;"></i>
                             <span class="rounded-pill bg-danger text-white position-absolute px-2 ms-1"
