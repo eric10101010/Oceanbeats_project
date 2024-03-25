@@ -43,15 +43,15 @@
                 </label>
                 <ul class="hamburger-menu bg-primary text-white d-flex list-unstyled">
                     <li class="headerItem pb-lg-0 pb-md-0 mb-3">
-                        <a class="nav-link" href="/#/about">關於我們</a>
+                        <a class="nav-link" href="/Oceanbeats_project/#/about">關於我們</a>
                         <!-- <routerLink to="/about" class="pageScroll text-decoration-none">關於我們</routerLink>  -->
                     </li>
                     <li class="headerItem pb-lg-0 pb-md-0 mb-3">
-                        <a class="nav-link" href="/#/products">商品列表</a>
+                        <a class="nav-link" href="/Oceanbeats_project/#/products">商品列表</a>
                         <!-- <routerLink to="/products" class="pageScroll text-decoration-none">產品列表</routerLink>  -->
                     </li>
                     <li class="headerItem pb-lg-0 pb-md-0 mb-3">
-                        <a class="nav-link" href="/#/contact">聯絡資訊</a>
+                        <a class="nav-link" href="/Oceanbeats_project/#/contact">聯絡資訊</a>
                         <!-- <routerLink to="/contact" class="pageScroll text-decoration-none">聯絡資訊</routerLink> -->
                     </li>
                     <li class="headerItem position-relative"> 
