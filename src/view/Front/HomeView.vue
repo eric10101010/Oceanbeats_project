@@ -4,9 +4,9 @@
         <div class="row indexBannerBox text-white">
             <div class="col-12 text-center">
                 <h2 class="pt-4">Oceanbeats</h2>
-                <h2 class="typing px-4">『專注聽覺深度沉浸體驗』</h2>
-                <div class="h4 py-4 text-center">
-                    <router-link to="/products" class="fw-bolder text-decoration-none p-2 px-4 btn btn-outline-light">
+                <h2 class="typing px-lg-4 px-md-4 px-0">『專注聽覺深度沉浸體驗』</h2>
+                <div class="text-center py-4">
+                    <router-link to="/products" class="fw-bolder text-decoration-none py-2 px-4 btn btn-outline-light">
                         <span class="px-2 ">由此前往選購</span>
                         <i class="bi bi-caret-right"></i>
                     </router-link>
@@ -15,15 +15,15 @@
         </div>
     </div>
     <!---首頁區塊2-品牌介紹--->
-    <div class="indexAbout container d-flex flex-column my-lg-6 my-md-6 my-4">
+    <div class="indexAbout container d-flex flex-column my-lg-6 my-md-6 my-lg-6 my-md-6 my-4">
         <ul class="row list-unstyled mb-0 d-flex justify-content-center mb-lg-0 mb-md-0 mb-4">
             <li class="col-lg-6 col-md-6 col-10 gx-0" data-aos="fade-up" data-aos-duration="2000">
                 <img class="object-fit-cover w-100" src="https://i.imgur.com/XQWFiqx.jpg" alt="aboout-1">
             </li>
-            <li class="col-lg-6 col-md-6 col-10 d-flex flex-column justify-content-center text-center px-lg-4 px-md-4 px-3">
+            <li class="indexAboutText col-lg-6 col-md-6 col-10 d-flex flex-column justify-content-center text-center px-lg-4 px-md-4 px-3">
                 <h3 class="fw-bolder pb-lg-4 pb-md-2 pb-1 pt-lg-0 pt-md-0 pt-3">品牌願景</h3>
-                <p style="line-height: 2.5rem;">Oceanbeats願產品能夠提供頂級的音質與最舒適的佩戴體驗，<br>
-                    致力於降躁科技的開發研究，加上配戴舒適度調整改良，<br>
+                <p class="px-lg-0 px-md-0 px-4">Oceanbeats提供頂級音質與最舒適的佩戴體驗，<br>
+                    致力於降躁科技的開發研究與舒適度調整改良，<br>
                     當使用者戴上Oceanbeats耳機後便可於音樂世界中盡情遨遊。
                 </p>
             </li>
@@ -32,10 +32,10 @@
             <li class="col-lg-6 col-md-6 col-10 gx-0" data-aos="fade-up" data-aos-duration="2000">
                 <img class="object-fit-cover w-100" src="https://i.imgur.com/4RCfmNd.jpg" alt="aboout-1">
             </li>
-            <li class="col-lg-6 col-md-6 col-10 d-flex flex-column justify-content-center text-center px-lg-4 px-md-4 px-3">
+            <li class="indexAboutText col-lg-6 col-md-6 col-10 d-flex flex-column justify-content-center text-center px-lg-4 px-md-4 px-3">
                 <h3 class="fw-bolder pb-lg-4 pb-md-2 pb-1 pt-lg-0 pt-md-0 pt-3">品牌風格</h3>
-                <p style="line-height: 2.5rem">Oceanbeats主打海洋輕盈風，若用海洋比擬音樂，<br>
-                    無論是海上驚滔駭浪，亦或是海底安寧沉穩，<br>
+                <p class="px-lg-0 px-md-0 px-4 mb-0">Oceanbeats主打海洋輕盈風，若用海洋來比擬音樂，那不管是<br>
+                    暴風雨時的驚滔駭浪，亦或是海底安寧沉穩，<br>
                     獨家晶片皆會為您真實重現各式不同的最好音質
                 </p>
             </li>
@@ -202,7 +202,7 @@
             <!--優惠卷-->
             <div class="text-white fade text-center" v-if="email" ref="done">
                 <h4 class="mb-1 mt-3">
-                    <span class="text-primary">{{ email }}</span>
+                    <span class="text-info">{{ email }}</span>
                 </h4>
                 <h4 class="text-white px-2 mb-3">已成功訂閱電子報</h4>
                 <ul class="list-unstyled d-flex align-items-center justify-content-center">
@@ -288,7 +288,6 @@ export default {
     methods: {
         getProducts() {
             const api =`${VITE_API}/api/${VITE_PATH}/products/all`;
-            const vm = this;
                 axios.get(api)
                     .then(res => {
                         this.products = res.data.products;
@@ -330,27 +329,38 @@ export default {
         background-position:75% 50%;
         background-size: cover;
         @media (max-width: 992px) {
-            height: 30vh;
+            height: 60vh;
         }
         @media (max-width: 767px) {
-            height: 35vh;
+            height: 50vh;
         }
         &Box {
             background-color: rgba(0, 0, 0, 0.7);
             @media (max-width: 992px) {
                 h2 {
-                    font-size: 24px;
+                    font-size: 40px;
                 }
             }
             @media (max-width: 767px) {
                 h2 {
-                    font-size: 20px;
+                    font-size: 24px;
                 }
             }
         }
     }
     &About {
         font-family: 'GenSenRounded';
+        &Text {
+            p {
+                line-height: 2.5rem;
+                @media (max-width: 992px) {
+                    line-height: 2rem;
+                }
+                @media (max-width: 767px) {
+                    line-height: 1.5em;
+                }
+            }
+        }
         @media (max-width: 992px) {
             h3 {
                 font-size: 24px;
