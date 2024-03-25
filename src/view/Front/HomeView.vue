@@ -21,10 +21,10 @@
                 <img class="object-fit-cover w-100" src="https://i.imgur.com/XQWFiqx.jpg" alt="aboout-1">
             </li>
             <li class="indexAboutText col-lg-6 col-md-6 col-10 d-flex flex-column justify-content-center text-center px-lg-4 px-md-4 px-3">
-                <h3 class="fw-bolder pb-lg-4 pb-md-2 pb-1 pt-lg-0 pt-md-0 pt-3">品牌願景</h3>
+                <h3 class="pb-lg-4 pb-md-2 pb-1 pt-lg-0 pt-md-0 pt-3">品牌願景</h3>
                 <p class="px-lg-0 px-md-0 px-4">Oceanbeats提供頂級音質與最舒適的佩戴體驗，<br>
                     致力於降躁科技的開發研究與舒適度調整改良，<br>
-                    當使用者戴上Oceanbeats耳機後便可於音樂世界中盡情遨遊。
+                    戴上Oceanbeats耳機後在音樂世界中盡情遨遊。
                 </p>
             </li>
         </ul>
@@ -33,9 +33,9 @@
                 <img class="object-fit-cover w-100" src="https://i.imgur.com/4RCfmNd.jpg" alt="aboout-1">
             </li>
             <li class="indexAboutText col-lg-6 col-md-6 col-10 d-flex flex-column justify-content-center text-center px-lg-4 px-md-4 px-3">
-                <h3 class="fw-bolder pb-lg-4 pb-md-2 pb-1 pt-lg-0 pt-md-0 pt-3">品牌風格</h3>
-                <p class="px-lg-0 px-md-0 px-4 mb-0">Oceanbeats主打海洋輕盈風，若用海洋來比擬音樂，那不管是<br>
-                    暴風雨時的驚滔駭浪，亦或是海底安寧沉穩，<br>
+                <h3 class="pb-lg-4 pb-md-2 pb-1 pt-lg-0 pt-md-0 pt-3">品牌風格</h3>
+                <p class="px-lg-0 px-md-0 px-4 mb-0">品牌風格主打海洋輕盈風，若用海洋來比擬音樂，<br>
+                    不管是暴風雨的驚滔駭浪，亦或是海底安寧沉穩，<br>
                     獨家晶片皆會為您真實重現各式不同的最好音質
                 </p>
             </li>
@@ -158,9 +158,9 @@
                                 </span>
                             </div>
                             <div class="fw-bolder">
-                                <span class="h4">
+                                <h3>
                                     {{ item.title }}
-                                </span>
+                                </h3>
                             </div>
                         </li>
                         <li class="d-flex mx-4 mt-2">
@@ -349,11 +349,21 @@ export default {
         }
     }
     &About {
-        font-family: 'GenSenRounded';
         &Text {
+            h3 {
+                font-family: 'GenSenRoundedBold';
+                font-size: 36px;
+                @media (max-width: 992px) {
+                    font-size: 24px;
+                }
+            }
             p {
+                font-family: 'GenSenRounded';
+                font-weight: bold;
+                font-size: 20px;
                 line-height: 2.5rem;
                 @media (max-width: 992px) {
+                    font-size: 14px;
                     line-height: 2rem;
                 }
                 @media (max-width: 767px) {
@@ -361,23 +371,10 @@ export default {
                 }
             }
         }
-        @media (max-width: 992px) {
-            h3 {
-                font-size: 24px;
-            }
-            p {
-                font-size: 14px
-            }
-        }
-        @media (max-width: 767px) {
-            h3 {
-                font-size: 20px;
-            }
-        }
     }
     &Catelog {
         &Back {
-            font-family: 'GenSenRounded';
+            font-family: 'GenSenRoundedBold';
             height:40vh;
             background: url('https://images.unsplash.com/photo-1624557446133-bd61df5a0e74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1500&q=80') no-repeat;
             background-position: 80% 50%;
@@ -412,6 +409,9 @@ export default {
         }
         &List {
             font-family: 'GenSenRounded';
+            h3 {
+                font-family: 'GenSenRoundedBold';
+            }
             @media (max-width: 992px) {
                 max-width: 300px;
             }
