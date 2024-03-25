@@ -17,9 +17,9 @@
                     </li>
                     <li class="headerItem me-3 position-relative">
                         <routerLink to="/cart" class="text-white text-decoration-none">
-                            購物車
+                            <i class="bi bi-cart-fill" style="font-size: 1.5rem;"></i>
                             <span class="rounded-pill bg-danger text-white position-absolute px-2"
-                                style="right: -20px; top: -20px;">
+                                style="right: -18px; top: -12px;">
                                 {{ this.carts?.length }}
                             </span>
                         </routerLink>
@@ -55,7 +55,6 @@
                     <li class="headerItem position-relative"> 
                         <!-- 購物車 -->
                         <a href="/Oceanbeats_project/#/cart" class="nav-link text-decoration-none">
-                            購物車
                             <i class="bi bi-cart-fill" style="font-size: 1.5rem;"></i>
                             <span class="rounded-pill bg-danger text-white position-absolute px-2 ms-1"
                                 style="right: -18px; top: -6px;">
