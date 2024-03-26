@@ -67,11 +67,11 @@
         </div>
     </header>
     <RouterView></RouterView>
-    <div class="footer bg-primary">
+    <div class="footer bg-primary py-6">
         <div class="container">
-            <ul class="footer footer-expend-lg d-flex justify-content-evenly  mb-4 list-unstyled">
+            <ul class="footer-expend-lg d-flex justify-content-evenly mb-3 list-unstyled">
                 <li>
-                    <h4 class="text-light mb-5 ps-3 h5">公司資訊</h4>
+                    <h4 class="text-light mb-4 ps-3 h5">公司資訊</h4>
                     <ul class="ps-3 list-unstyled text-center">
                         <li class="mb-4">
                             <router-link to="/about" class="text-light text-decoration-none">
@@ -91,7 +91,7 @@
                     </ul>
                 </li>
                 <li>
-                    <h4 class="text-light mb-5 ps-3 h5">服務範圍</h4>
+                    <h4 class="text-light mb-4 ps-3 h5">服務範圍</h4>
                     <ul class="ps-3 list-unstyled text-center">
                         <li class="mb-4">
                             <router-link to="/" class="text-light text-decoration-none">
@@ -111,7 +111,7 @@
                     </ul>
                 </li>
                 <li>
-                    <h4 class="text-light mb-5 ps-3 h5">
+                    <h4 class="text-light mb-4 ps-3 h5">
                     後台管理
                     </h4>
                     <ul class="ps-3 list-unstyled text-center">
@@ -198,7 +198,6 @@
 }
 .footer {
     font-family: 'GenSenRounded';
-    padding: 36px 0;
 }
 .hamburger-menu {
     opacity: 0.97;
