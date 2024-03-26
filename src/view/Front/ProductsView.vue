@@ -8,8 +8,8 @@
     <div class="container">
         <div class="row products mt-lg-6 mt-md-4 mt-5 d-flex justify-content-center">
             <!-- 種類側欄 -->
-            <div class="col-lg-3 col-md-3 col-10 mb-lg-0 mb-md-0 mb-5">
-                <ul class="productsSide list-group list-unstyle">
+            <div class="productsSideList col-lg-3 col-md-3 col-12 mb-lg-0 mb-md-0 mb-5 px-0">
+                <ul class="productsSide list-group list-unstyle w-100">
                     <li class="productsSideItem list-group-item border border-third d-flex justify-content-center align-items-center" :class="{active: isActive === 1}"  @click="changeClick(1)">
                         <router-link :to="`/products`" class="text-decoration-none">
                             全部商品
@@ -28,8 +28,8 @@
                         <!-- 商品容器 -->
                         <div class="productsList mx-auto rounded-2 mb-4" v-if="index <= 5">
                             <!-- 1.商品圖片 -->
-                            <div class="productsPhoto position-relative d-flex justify-content-center align-items-center">
-                                <router-link :to="`/product/${product.id}`">
+                            <div class=" position-relative d-flex flex-column justify-content-center align-items-center">
+                                <router-link :to="`/product/${product.id}`" class="productsPhoto">
                                     <img :src="product.imageUrl" alt="productsPhoto" class="rounded-top">
                                 </router-link>
                                 <!-- 2.分類tag -->
@@ -39,40 +39,40 @@
                                 <!-- <div style="height: 100px; background-size: cover; background-position: center;" 
                                     :style="{ backgroundImage : `url(${product.imageUrl})`}">
                                 </div> -->
+                                <ul class="productsText list-unstyled mb-0 w-100">
+                                    <!-- 3.商品名稱 -->
+                                    <li class="productsTitle">
+                                        <h5 class="text-center my-lg-2 my-md-1 fw-bolder" style="font-size:22px">
+                                            {{ product.title }}
+                                        </h5>
+                                    </li>
+                                    <!-- 4.價錢+購物車 -->
+                                    <li class="productsCart">
+                                        <ul class="d-flex justify-content-center align-items-center list-unstyled">
+                                            <li class="text-third text-decoration-line-through " style="font-size:14px">
+                                                NT$ {{ product.origin_price }}
+                                            </li>
+                                            <li class="text-dark fw-bolder px-3" style="font-size:20px">
+                                                NT$ {{ product.price }}
+                                            </li>
+                                        </ul>
+                                        <hr>
+                                        <div class="d-flex justify-content-around pb-3">
+                                            <button type="button" class="productsSeeMore btn btn-outline-primary ">
+                                                <routerLink :to="`/product/${product.id}`" class="text-decoration-none">
+                                                    查看更多
+                                                </routerLink>
+                                            </button>
+                                            <button type="button" class="btn btn-outline-danger" 
+                                                    :disabled="product.id === status.addCartLoading"
+                                                    @click.prevent="addCart(product.id)">
+                                                <span class="spinner-border spinner-border-sm text-danger" role="status" v-if="product.id === status.addCartLoading"></span>
+                                                    加入購物車
+                                            </button>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
-                            <ul class="productsText list-unstyled mb-0">
-                                <!-- 3.商品名稱 -->
-                                <li class="productsTitle">
-                                    <h5 class="text-center my-lg-2 my-md-1 fw-bolder" style="font-size:22px">
-                                        {{ product.title }}
-                                    </h5>
-                                </li>
-                                <!-- 4.價錢+購物車 -->
-                                <li class="productsCart">
-                                    <ul class="d-flex justify-content-center align-items-center list-unstyled">
-                                        <li class="text-third text-decoration-line-through " style="font-size:14px">
-                                            NT$ {{ product.origin_price }}
-                                        </li>
-                                        <li class="text-dark fw-bolder px-3" style="font-size:20px">
-                                            NT$ {{ product.price }}
-                                        </li>
-                                    </ul>
-                                    <hr>
-                                    <div class="d-flex justify-content-around pb-3">
-                                        <button type="button" class="productsSeeMore btn btn-outline-primary ">
-                                            <routerLink :to="`/product/${product.id}`" class="text-decoration-none">
-                                                查看更多
-                                            </routerLink>
-                                        </button>
-                                        <button type="button" class="btn btn-outline-danger" 
-                                                :disabled="product.id === status.addCartLoading"
-                                                @click.prevent="addCart(product.id)">
-                                            <span class="spinner-border spinner-border-sm text-danger" role="status" v-if="product.id === status.addCartLoading"></span>
-                                                加入購物車
-                                        </button>
-                                    </div>
-                                </li>
-                            </ul>
                         </div>
                     </div>
                 </div>
@@ -211,31 +211,57 @@ export default {
             transition: .3s;
         }
     }
+    &Side {
+        &List {
+            @media (max-width: 767px) {
+                margin: 0 auto;
+                width: 288px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        @media (max-width: 767px) {
+            max-width: 288px;
+        }
+
+    }
     &List {
         box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
         @media (max-width: 992px) {
             max-width: 240px;
+        }
+        @media (max-width: 767px) {
+            max-width: 288px;
         }
     }
     &Photo {
         cursor: pointer;
         overflow: hidden;
         :hover {
-                transform: scale(1.1);
-                transition: all .8s ease;
-            }
+            transform: scale(1.1);
+            transition: all .8s ease;
+        }
         img {
             max-width: 100%;
-            height: 180px;
+            height: 140px;
             object-fit: cover;
             @media (max-width: 992px) {
-                max-height: 160px;
+                max-width: 240px;
+                height: 120px;
+            }
+            @media (max-width: 767px) {
+                max-width: 288px;
+                height: 140px;
             }
         }
     }
     &Text {
         @media (max-width: 992px) {
             max-width: 240px;
+        }
+        @media (max-width: 767px) {
+            max-width: 288px;
         }
     }
     &Cart {

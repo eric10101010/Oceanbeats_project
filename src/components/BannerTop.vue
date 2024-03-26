@@ -4,7 +4,7 @@
     :style="`background: url(${backList}) 30% 50% no-repeat` ">
         <div class="row bannerTopBox w-100">
             <div class="text-white text-center">
-                <h2 class="text-center p-5">{{ subjectTilte }}</h2>
+                <h2 class="text-center py-6">{{ subjectTilte }}</h2>
             </div>
         </div>
     </div>
