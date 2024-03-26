@@ -47,14 +47,14 @@
             <li class="indexCatelogItem col-lg-3 col-md-3 col-3 change mx-lg-2 mx-md-2 mx-3">
                 <div class="rotate-one" style="background-image: url('https://images.unsplash.com/photo-1533734640-1e555dd1f5cf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2302&q=60');">
                     <div class="contents">
-                        <router-link to="/products?category=有線耳機" class="text-decoration-none text-light text-center px-3 border border-light">
+                        <router-link to="/products?category=有線耳機" class="text-decoration-none text-light text-center px-lg-3 px-md-2 px-2 border border-light">
                             有線耳機
                         </router-link>
                     </div>
                 </div>
                 <div class="rotate-two" style="background-image: url('https://i.imgur.com/UHUqSwd.jpg'),linear-gradient(to right,#00000070,#00000070);">
                     <div class="contents">
-                        <router-link to="/products?category=有線耳機" class="text-decoration-none text-light text-center px-3 border border-light">
+                        <router-link to="/products?category=有線耳機" class="text-decoration-none text-light text-center px-lg-3 px-md-2 px-2 border border-light">
                             有線耳機
                         </router-link>
                     </div>
@@ -63,14 +63,14 @@
             <li class="indexCatelogItem col-lg-3 col-md-3 col-3 change mx-lg-2 mx-md-2 mx-3">
                 <div class="rotate-one" style="background-image: url('https://i.imgur.com/xtSWZJu.jpg');">
                     <div class="contents">
-                        <router-link to="/products?category=藍芽耳機" class="text-decoration-none text-light text-center px-3 border border-light ">
+                        <router-link to="/products?category=藍芽耳機" class="text-decoration-none text-light text-center px-lg-3 px-md-2 px-2 border border-light ">
                             藍芽耳機
                         </router-link>
                     </div>
                 </div>
                 <div class="rotate-two" style="background-image: url('https://images.unsplash.com/photo-1606400082792-fe14743a8e01?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80'),linear-gradient(to right,#00000070,#00000070);">
                     <div class="contents">
-                        <router-link to="/products?category=藍芽耳機" class="text-decoration-none text-light text-center px-3 border border-light ">
+                        <router-link to="/products?category=藍芽耳機" class="text-decoration-none text-light text-center px-lg-3 px-md-2 px-2 border border-light ">
                             藍芽耳機
                         </router-link>
                     </div>
@@ -79,14 +79,14 @@
             <li class="indexCatelogItem col-lg-3 col-md-3 col-3 change mx-lg-2 mx-md-2 mx-3 mt-0">
                 <div class="rotate-one" style="background-image: url('https://i.imgur.com/MyRVJ7R.jpg'); background-position: 50% 50%">
                     <div class="contents">
-                        <router-link to="/products?category=有線耳罩" class="text-decoration-none text-light text-center px-3 border border-light">
+                        <router-link to="/products?category=有線耳罩" class="text-decoration-none text-light text-center px-lg-3 px-md-2 px-2 border border-light">
                             有線耳罩
                         </router-link>
                     </div>
                 </div>
                 <div class="rotate-two" style="background-image: url('https://i.imgur.com/gsPBD5L.jpg'),linear-gradient(to right,#00000070,#00000070);">
                     <div class="contents">
-                        <router-link to="/products?category=有線耳罩" class="text-decoration-none text-light text-center px-3 border border-light">
+                        <router-link to="/products?category=有線耳罩" class="text-decoration-none text-light text-center px-lg-3 px-md-2 px-2 border border-light">
                             有線耳罩
                         </router-link>
                     </div>
@@ -95,14 +95,14 @@
             <li class="indexCatelogItem col-lg-3 col-md-3 col-3 change mx-lg-2 mx-md-2 mx-3 mt-0">
                 <div class="rotate-one" style="background-image: url('https://images.unsplash.com/photo-1594434533760-02e0f3faaa68?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1136&q=60');  background-position: 35% 50%">
                     <div class="contents"          >
-                        <router-link to="/products?category=藍芽耳罩" class="text-decoration-none text-light text-center px-3 border border-light">
+                        <router-link to="/products?category=藍芽耳罩" class="text-decoration-none text-light text-center px-lg-3 px-md-2 px-2 border border-light">
                             藍芽耳罩
                         </router-link>
                     </div>
                 </div>
                 <div class="rotate-two" style="background-image: url('https://i.imgur.com/8BbcyqU.jpg'),linear-gradient(to right,#00000070,#00000070);">
                     <div class="contents">
-                        <router-link to="/products?category=藍芽耳罩" class="text-decoration-none text-light text-center py-1 px-3 border border-light">
+                        <router-link to="/products?category=藍芽耳罩" class="text-decoration-none text-light text-center py-1 px-lg-3 px-md-2 px-2 border border-light">
                             藍芽耳罩
                         </router-link>
                     </div>
@@ -121,7 +121,7 @@
             :navigation="true" :lazy="true"
             :breakpoints="{
                 320: {
-                slidesPerView: 1.2,
+                slidesPerView: 1.6,
                 spaceBetween: 10
                 },
                 480: {
@@ -132,7 +132,7 @@
                 slidesPerView: 2,
                 spaceBetween: 50
                 },
-                1024: {
+                992: {
                 slidesPerView: 3,
                 spaceBetween: 20
                 }
@@ -150,27 +150,27 @@
                             </div>
                         </router-link>
                     </div>
-                    <ul class="list-undtyled mt-4">
-                        <li class="d-flex align-items-center ps-4">
-                            <div class="fw-bolder badge bg-secondary me-3">
+                    <ul class="list-undtyled mt-4 ps-0">
+                        <li class="d-flex align-items-center ps-lg-4 ps-md-2 ps-0">
+                            <div class="fw-bolder badge bg-secondary me-lg-3 me-md-2 me-1">
                                 <span>
                                     {{ item.category }}
                                 </span>
                             </div>
                             <div class="fw-bolder">
-                                <h3>
+                                <h3 class="mb-0">
                                     {{ item.title }}
                                 </h3>
                             </div>
                         </li>
-                        <li class="d-flex mx-4 mt-2">
-                            <div class="card-text  text-decoration-line-through">
-                                <small class="me-1">原價</small>
-                                <span>NT {{ item.origin_price }}</span>
+                        <li class="d-flex mx-lg-2 mx-md-2 mx-3 mt-2 mt-md-3 mt-3 align-items-center">
+                            <div class="card-text text-decoration-line-through d-lg-flex d-md-flex d-none me-2">
+                                <p>原價</p>
+                                <p>NT{{ item.origin_price }}</p>
                             </div>
-                            <div class="card-text price mb-2">
-                                <span class="me-1">特價:</span>
-                                <span class="fw-bolder text-danger">NT{{ item.price }}</span>
+                            <div class="card-text price mb-2 d-flex">
+                                <h4 class="me-1">特價:</h4>
+                                <h4 class="fw-bolder text-danger">NT{{ item.price }}</h4>
                             </div>
                         </li>
                     </ul>
@@ -332,7 +332,7 @@ export default {
             height: 60vh;
         }
         @media (max-width: 767px) {
-            height: 50vh;
+            height: 40vh;
         }
         &Box {
             background-color: rgba(0, 0, 0, 0.7);
@@ -389,7 +389,7 @@ export default {
                 height: 20vh;
             }
             @media (max-width: 411px) {
-                height: 40vh;
+                height: 30vh;
             }
         }
     }
@@ -417,9 +417,21 @@ export default {
             font-family: 'GenSenRounded';
             h3 {
                 font-family: 'GenSenRoundedBold';
+                @media (max-width: 767px) {
+                    font-size: 20px;
+                    margin-bottom: 0;
+                }
+            }
+            h4, p {
+                @media (max-width: 767px) {
+                    font-size: 20px;
+                }
             }
             @media (max-width: 992px) {
                 max-width: 300px;
+            }
+            @media (max-width: 767px) {
+                max-width: 200px;
             }
             img {
                 width: 100%;
