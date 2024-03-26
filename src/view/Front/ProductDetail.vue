@@ -18,14 +18,14 @@
                 <!--商品右側文字資訊-->
                 <li class="col-lg-5 col-md-5 col-12">
                     <div class="text-lg-start text-md-start text-center">
-                        <h2 class="fw-bolder pb-lg-3 pb-md-2">{{ product.title }}</h2>
-                        <h3 class="h5 pe-4 pb-2">{{ product.description }}</h3>
-                        <h3 class="h5 pe-4">{{ product.content }}</h3>
-                        <div class="d-flex align-items-center justify-content-lg-start justify-content-md-start justify-content-center pt-lg-4 ">
-                            <p class="h3 text-danger fw-bolder me-2">
+                        <h2 class="fw-bolder pb-lg-3 pb-md-0 pb-2">{{ product.title }}</h2>
+                        <h3 class="h5 pe-lg-4 pe-md-4 pe-0">{{ product.description }}</h3>
+                        <h3 class="h5 pe-lg-4 pe-md-4 pe-0">{{ product.content }}</h3>
+                        <div class="d-flex align-items-center justify-content-lg-start justify-content-md-start justify-content-center pt-lg-4 pt-md-0 pt-2">
+                            <p class="h3 text-danger fw-bolder me-2 mb-0">
                                 NT${{ product.price }}
                             </p>
-                            <p class="h6 text-third text-decoration-line-through" v-if="product.price !== product.origin_price">
+                            <p class="h6 text-third text-decoration-line-through mb-0" v-if="product.price !== product.origin_price">
                                 NT${{ product.origin_price }}
                             </p>
                         </div>
@@ -33,13 +33,13 @@
                     <hr>
                     <ul class="d-flex align-items-center justify-content-lg-start justify-content-md-start justify-content-center list-unstyled">
                         <li class="input-group w-50 me-lg-4 me-md-4 me-2">
-                                <button type="button" class="btn text-white btn-secondary border rounded-0" @click.prevent="adjustNum('minus')">
-                                    -
-                                </button>
-                                <input type="number" id="Number" class="form-control text-center pe-lg-0 rounded-0" v-model="cartNum" readonly/>
-                                <button type="button" class="btn text-white btn-secondary rounded-0" @click.prevent="adjustNum('plus')">
-                                    +
-                                </button>
+                            <button type="button" class="btn text-white btn-secondary border rounded-0" @click.prevent="adjustNum('minus')">
+                                -
+                            </button>
+                            <input type="number" id="Number" class="form-control text-center pe-lg-0 rounded-0" v-model="cartNum" readonly/>
+                            <button type="button" class="btn text-white btn-secondary rounded-0" @click.prevent="adjustNum('plus')">
+                                +
+                            </button>
                         </li>
                         <li>
                             <button type="button" class="btn btn-outline-danger" 
@@ -268,6 +268,10 @@ export default {
 .product{
     font-family: 'GenSenRounded';
     &Infor {
+        h2 {
+            font-size: 32px;
+            font-family: 'GenSenRoundedBold';
+        }
         @media (max-width:992px) {
             h2 {
                 font-size: 24px;
@@ -292,4 +296,8 @@ export default {
         }
     }
 }
+.nav-link.active {
+    color: #596FB7; 
+}
+
 </style>
