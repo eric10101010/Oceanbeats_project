@@ -6,12 +6,12 @@
     <section class="aboutBack">
         <div class="container-fluid ">
             <ul class="aboutText row mb-0 list-unstyled py-lg-8 py-md-6 py-4">
-                <li class="col-lg-5 col-md-6 d-flex justify-content-center" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="1500" data-aos-offset="150">
+                <li class="col-lg-5 col-md-6 col-10 d-flex justify-content-center px-0" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="1500" data-aos-offset="150">
                     <img src="../../assets/about.jpg" alt="" class="object-fit-cover w-100">
                 </li>
                 <li class="col-lg-7 col-md-6 text-white text-center" data-aos="zoom-in-up" data-aos-duration="1500" data-aos-offset="150">
-                    <h2 class="display-5 fw-bolder pt-lg-5 pt-md-4 pt-4">Oceanbeats</h2>
-                    <p class="px-lg-0 px-md-3 h5 pb-0" style="line-height:2.5rem;">
+                    <h2 class="display-5 fw-bolder pt-lg-4 pt-md-4 pt-3">Oceanbeats</h2>
+                    <p class="px-lg-0 px-md-3 h5 pb-0">
                         Oceanbeats理念是全力以赴，不斷自我挑戰<br>
                         讓用戶在使用時能有最好的聽感體驗。<br>
                         專注打造出最純粹，最頂級的音質，<br>
@@ -20,8 +20,8 @@
                     </p>
                 </li>
             </ul>
-            <ul class="row aboutInfor list-unstyled mb-0 ">
-                <li class="aboutInforItem aboutInforOne col-lg-4 col-md-4 text-center d-flex align-items-center justify-content-center">
+            <ul class="row aboutInfor list-unstyled mb-0">
+                <li class="aboutInforItem aboutInforOne col-lg-4 col-md-4 col-10 text-center d-flex align-items-center justify-content-center">
                     <div class="aboutInforText text-white px-lg-5 px-md-2 px-3" >
                         <h3 class="pt-3 fw-bold">核心技術</h3>
                         <p class="pt-lg-1">
@@ -31,7 +31,7 @@
                         </p>
                     </div>
                 </li>
-                <li class="aboutInforItem aboutInforTwo col-lg-4 col-md-4 text-center d-flex align-items-center justify-content-center">
+                <li class="aboutInforItem aboutInforTwo col-lg-4 col-md-4 col-10 text-center d-flex align-items-center justify-content-center">
                     <div class="aboutInforText text-white px-lg-5 px-md-2 px-3">
                         <h3 class="pt-3 fw-bold">創新研發</h3>
                         <p class="pt-lg-1">
@@ -41,7 +41,7 @@
                         </p>
                     </div>
                 </li>
-                <li class="aboutInforItem aboutInforThree col-lg-4 col-md-4 text-center d-flex align-items-center justify-content-center">
+                <li class="aboutInforItem aboutInforThree col-lg-4 col-md-4 col-10 text-center d-flex align-items-center justify-content-center">
                     <div class="aboutInforText text-white px-lg-5 px-md-2 px-3">
                         <h3 class="pt-3 fw-bold">專業服務</h3>
                         <p class="pt-lg-1">
@@ -58,8 +58,8 @@
                     <img src="https://images.unsplash.com/photo-1646500366920-b4c5ce29237d?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="object-fit-cover w-100">
                 </li>
                 <li class="col-lg-7 col-md-6 text-white text-center" data-aos="zoom-in-up" data-aos-duration="1500">
-                    <h2 class="display-5 fw-bolder pt-lg-5 pt-md-4 pt-4">Oceanbeats</h2>
-                    <p class="px-lg-0 px-md-3 h5" style="line-height:2.5rem;">
+                    <h2 class="display-5 fw-bolder pt-lg-4 pt-md-4 pt-3">Oceanbeats</h2>
+                    <p class="px-lg-0 px-md-3 h5">
                         我們的耳機融合了優雅設計與卓越音質，<br>
                         成為您日常生活的時尚配件。<br>
                         注入創新與精湛工藝，呈現獨特的品牌風格。<br>
@@ -97,30 +97,43 @@ export default {
 .about {
     &Text {
         font-family: 'GenSenRounded';
+        p{
+            line-height: 2.5rem;
+        }
         @media (max-width: 992px) {
             h2 {
                 font-size: 36px;
             }
             p {
                 font-size: 16px;
+                line-height: 2rem;
             }
         }
         @media (max-width: 767px) {
+            display: flex;
+            justify-content: center;
             h2 {
                 font-size: 28px;
             }
             p {
                 font-size: 14px;
+                line-height: 1.5rem;
+                
+            }
+        }
+        img {
+            @media (max-width: 767px) {
+                max-height: 360px;
             }
         }
     }
     &Back {
         background-image: url("https://images.unsplash.com/photo-1623425654244-a91e8f48bd63?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=80");
-        min-height: 100vh;
+        min-height: 50vh;
         background-size: cover;
         background-attachment: fixed;
         background-repeat: no-repeat;
-        background-position: center center;
+        background-position: center center;       
     }
     &Infor {
         &One {
@@ -131,6 +144,10 @@ export default {
         }
         &Three {
             background: url("https://i.imgur.com/BsWYQWr.jpg");
+        }
+        @media (max-width: 767px) {
+            display: flex;
+            justify-content: center;
         }
         &Item {
             font-family: 'GenSenRounded';
