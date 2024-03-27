@@ -19,7 +19,7 @@
                         <routerLink to="/cart" class="text-white text-decoration-none">
                             <i class="bi bi-cart-fill" style="font-size: 1.5rem;"></i>
                             <span class="rounded-pill bg-danger text-white position-absolute px-2"
-                                style="right: -18px; top: -12px;">
+                                style="right: -20px; top: -16px;">
                                 {{ this.carts?.length }}
                             </span>
                         </routerLink>

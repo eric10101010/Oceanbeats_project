@@ -1,11 +1,12 @@
 <template>
     <BannerTop :subject-tilte="subjectTilte" :back-list="backList"></BannerTop>
     <!-- breadcrumb -->
-    <!-- <BreadCrumb :breadcrumb-name="breadcrumbName"></BreadCrumb> -->
+
     <!-- About -->
     <section class="aboutBack">
         <div class="container-fluid ">
-            <ul class="aboutText row mb-0 list-unstyled py-lg-8 py-md-6 py-4">
+            <BreadCrumb :breadcrumb-name="breadcrumbName"></BreadCrumb>
+            <ul class="aboutText row mb-0 list-unstyled py-lg-6 py-md-6 pt-0 pb-4">
                 <li class="col-lg-5 col-md-6 col-10 d-flex justify-content-center px-0" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="1500" data-aos-offset="150">
                     <img src="../../assets/about.jpg" alt="" class="object-fit-cover w-100">
                 </li>

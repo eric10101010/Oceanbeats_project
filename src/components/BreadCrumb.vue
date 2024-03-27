@@ -1,15 +1,15 @@
 <template>
     <!-- breadcrumb -->
-    <div class="breadcrumb container">
-        <nav aria-label="breadcrumb row mb-3">
-            <ul class="breadcrumb col-lg-12 col-md-12 col-12" aria-label="breadcrumb mb-3">
-                <li class="breadcrumb-item">
-                    <router-link to="/" class="text-secondary text-decoration-none">
-                    首頁
+    <div class="breadcrumb">
+        <nav aria-label="breadcrumb">
+            <ul class="d-flex mt-lg-6 mt-md-4 mt-4" aria-label="breadcrumb ">
+                <li class="breadcrumbItem">
+                    <router-link to="/" class="text-decoration-none">
+                    首頁 
                     </router-link>
                 </li>
-                <li class="breadcrumb-item active text-third" aria-current="page">
-                    {{ breadcrumbName }}
+                <li class="breadcrumbItem text-secondary" aria-current="page">
+                    <span class="px-2">/</span>{{ breadcrumbName }}
                 </li>
             </ul>
         </nav>
@@ -21,3 +21,20 @@ export default {
     props: ['breadcrumbName'],
 }
 </script>
+
+<style lang="scss" scoped>
+.breadcrumb {
+    font-family: 'GenSenRounded';
+    &Item {
+        a {
+            color: #9EB8D9;
+            &:hover {
+                color: #9EB8D9;
+                opacity: .7;
+                transition: .3s;
+            }
+        }
+
+    }
+}
+</style>

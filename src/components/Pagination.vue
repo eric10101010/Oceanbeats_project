@@ -1,6 +1,6 @@
 <template>
     <nav aria-label="Page navigation example">
-        <ul class="pagination mt-lg-4 mt-md-4 mt-3 mb-5">
+        <ul class="pagination mb-lg-8 mb-md-8 mb-6 mt-4">
             <li class="page-item" :class="{ disabled: !pages.has_pre }">
                 <a class="page-link" aria-label="Previous" @click.prevent="updatePage(pages.current_page -1)">
                     <span aria-hidden="true">&laquo;</span>
