@@ -132,8 +132,6 @@
     </div>
 </template>
 
-
-
 <style lang="scss">
 .header {
     font-family: 'GenSenRounded';
@@ -266,7 +264,6 @@
 }
 </style>
 
-
 <script>
 import { mapActions, mapState } from 'pinia';
 import cartStore from '../../stores/cartStore';
@@ -289,4 +286,7 @@ export default {
     }
 }
 
+
+
 </script>
+
